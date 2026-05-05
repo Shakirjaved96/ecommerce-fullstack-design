@@ -11,9 +11,17 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
+console.log('Attempting to connect to MongoDB...');
+if (!process.env.MONGO_URI) {
+  console.error('ERROR: MONGO_URI is not defined in environment variables!');
+}
+
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((err) => console.error('Error connecting to MongoDB:', err));
+  .then(() => console.log('Successfully connected to MongoDB'))
+  .catch((err) => {
+    console.error('CRITICAL: Error connecting to MongoDB:');
+    console.error(err);
+  });
 
 // Basic Route
 app.get('/', (req, res) => {
