@@ -45,8 +45,7 @@ const Home = () => {
           <div className="flex-grow p-0 md:p-4">
             <div className="h-[200px] md:h-full flex items-center p-6 md:p-12 relative overflow-hidden bg-cover bg-center bg-[#127FFF]" style={{backgroundImage: "url('/images/home-banner.png')"}}>
               <div className="z-10 relative">
-                <h2 className="text-lg md:text-3xl text-[#1C1C1C]">Latest trending</h2>
-                <h1 className="text-xl md:text-4xl font-bold text-[#1C1C1C] mb-4 md:mb-7 leading-tight">Electronic items</h1>
+                
                 <button className="bg-white text-[#1C1C1C] font-bold py-1.5 md:py-2.5 px-4 md:px-8 rounded-lg text-sm md:text-base shadow-sm hover:bg-gray-50">Source now</button>
               </div>
             </div>
